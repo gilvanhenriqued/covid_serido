@@ -1,36 +1,30 @@
 <template>
   <div id="app">
-    <h1>Conversor de Moedas</h1>
-    <div class="linha">
-      <Conversor moeda-a="USD" moeda-b="BRL"/>
-      <Conversor moeda-a="BRL" moeda-b="USD"/>
-    </div>
-    <div class="linha">
-      <Conversor moeda-a="EUR" moeda-b="BRL"/>
-      <Conversor moeda-a="BRL" moeda-b="EUR"/>
-    </div>
-    <div class="linha">
-      <Conversor moeda-a="CAD" moeda-b="BRL"/>
-      <Conversor moeda-a="BRL" moeda-b="CAD"/>
+    <h1>Boletim Covid Seridó</h1>
+    <div class="container" >
+      <div class="row">
+        <div class="col s4">
+          <Infocard></Infocard>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import Conversor from "./components/Conversor.vue"
+import Infocard from "./components/Infocard";
 
 export default {
-  name: 'App',
-  components: { 
-    Conversor
+  name: "App",
+  components: {
+    Infocard
   }
-}
+};
 </script>
 
 <style>
 #app {
   margin: auto;
-  max-width: 800px;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -39,13 +33,9 @@ export default {
   margin-top: 60px;
 }
 
-.linha {
-  margin-top: 25px;
+.container {
   display: flex;
-  justify-content: space-around;
-}
-
-h1 {
-  font-size: 50px;
+  justify-content: center;
+  align-items: center;
 }
 </style>
