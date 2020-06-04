@@ -1,20 +1,27 @@
 <template>
   <div id="app">
-    <h1 class="">Boletim Covid Seridó</h1>
+    <header>
+      <h1>Boletim Covid Seridó</h1>
+    </header>
     <div class="container" >
       <div class="row">
-        <div class="col s4" v-for="infocard in infocards" :key="infocard.country">
+        <div class="col s4" v-for="infocard in infocards" :key="infocard.city">
           <infocard 
           :local="infocard.city"
           :totalCasos="infocard.confirmed"
-          :casosAtuais="infocard.cases"
-          :recuperados="infocard.recovered"
           :mortes="infocard.deaths"
+          :populacao="infocard.estimated_population_2019"
           :dataAtualizacao="infocard.date">
           </infocard>
         </div>
       </div>
     </div>
+    <footer class="">
+      Dados da população de 2019. Fonte: IBGE.
+      Fonte dos dados: API Brasil.io.
+      Desenvolvido por Gilvan Henrique.
+      Código github: ...
+    </footer>
   </div>
 </template>
 
@@ -34,9 +41,8 @@ export default {
   },
   created(){
     var self = this
-    CovidAPI.listarDadosCovidSerido(parametros => {
-      self.infocards = parametros.data.results
-      console.log(self.infocards)
+    CovidAPI.listarDadosCovidSerido(dados => {
+      self.infocards = dados
     })
   }
 };

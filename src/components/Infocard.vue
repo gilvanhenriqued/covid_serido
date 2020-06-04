@@ -7,16 +7,12 @@
         <b>{{ totalCasos }}</b>
       </li>
       <li>
-        Casos atuais:
-        <b>{{ casosAtuais }}</b>
-      </li>
-      <li>
-        Recuperados:
-        <b>{{ recuperados }}</b>
-      </li>
-      <li>
         Fatalidades:
         <b>{{ mortes }}</b>
+      </li>
+      <li>
+        População:
+        <b>{{ populacao }}</b>
       </li>
     </ul>
     <p>Última atualização: {{ dataAtualizacao }}</p>
@@ -29,57 +25,10 @@ export default {
   props: {
       local: { type: String },
       totalCasos: { type: Number },
-      casosAtuais: { type: Number },
-      recuperados: { type: Number },
+      populacao: { type: Number },
       mortes: { type: Number },
       dataAtualizacao: { type: String }
   }
-
-/*   data() {
-    let dataAtualizacao = ""
-    // Route to acess datas of covid in Brazil
-    fetch("https://covid19-brazil-api.now.sh/api/report/v1/brazil", {
-      method: "GET"
-    })
-      .then(res => {
-        return res.json();
-      })
-      .then(dados => {
-
-        dataAtualizacao = dados.data.updated_at.split("T", 2),
-        dataAtualizacao = dataAtualizacao[0]
-
-        this.informacoesBrasil = {
-            dataAtualizacao: dataAtualizacao,
-            local : dados.data.country,
-            totalCasos : dados.data.confirmed,
-            casosAtuais : dados.data.cases,
-            recuperados : dados.data.recovered,
-            mortes : dados.data.deaths
-        }
-
-        console.log(this.informacoesBrasil)
-      })
-      .catch(erro => {
-        console.log(erro);
-      });
-
-    // Route to acess datas of covid in RN
-    fetch("https://covid19-brazil-api.now.sh/api/report/v1/brazil/uf/rn", {
-      method: "GET"
-    })
-      .then(res => {
-        return res.json();
-      })
-       .then(dados => {
-        console.log(dados);
-      })
-      .catch(erro => console.error(erro));
-
-    return {
-      informacoesBrasil: {}
-    };
-  } */
 };
 </script>
 
@@ -99,4 +48,5 @@ p {
   font-style: italic;
   font-size: 13px;
 }
+
 </style>
