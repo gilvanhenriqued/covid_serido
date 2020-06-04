@@ -86,7 +86,6 @@ export default {
 <style scoped>
 .card {
   border: solid 1px rgb(218, 218, 218);
-  min-width: 350px;
   box-shadow: 8px 8px 8px 0 rgba(250, 192, 0, 0.2);
 }
 

@@ -5,12 +5,12 @@
       <div class="row">
         <div class="col s4" v-for="infocard in infocards" :key="infocard.country">
           <infocard 
-            :local="infocard.country"
-            :totalCasos="infocard.confirmed"
-            :casosAtuais="infocard.cases"
-            :recuperados="infocard.recovered"
-            :mortes="infocard.deaths"
-            :dataAtualizacao="infocard.updated_at">
+          :local="infocard.city"
+          :totalCasos="infocard.confirmed"
+          :casosAtuais="infocard.cases"
+          :recuperados="infocard.recovered"
+          :mortes="infocard.deaths"
+          :dataAtualizacao="infocard.date">
           </infocard>
         </div>
       </div>
@@ -34,8 +34,8 @@ export default {
   },
   created(){
     var self = this
-    CovidAPI.listarDadosCovid(parametros => {
-      self.infocards = parametros.data
+    CovidAPI.listarDadosCovidSerido(parametros => {
+      self.infocards = parametros.data.results
       console.log(self.infocards)
     })
   }
@@ -54,7 +54,7 @@ export default {
 
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 
 }
