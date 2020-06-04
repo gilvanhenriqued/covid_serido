@@ -12,8 +12,8 @@ export default {
                 || item.city == "Parelhas" || item.city == "Carnaúba dos Dantas"
                 || item.city == "Jardim do Seridó" || item.city == "Equador"
                 || item.city == "Currais Novos" || item.city == "Cruzeta"
-                || item.city == "Jardim de Piranhas" || item.city == "Santana do Seridó"
-                || item.city == "Ouro Branco"
+                || item.city == "Florânia" || item.city == "Santana do Seridó"
+                || item.city == "Ouro Branco" || item.city == "Jucurutu"
             }
 
             if(callback) {

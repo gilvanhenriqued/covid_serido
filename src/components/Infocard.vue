@@ -35,7 +35,12 @@ export default {
 <style scoped>
 .card {
   border: solid 1px rgb(218, 218, 218);
-  box-shadow: 8px 8px 8px 0 rgba(250, 192, 0, 0.2);
+  box-shadow: 8px 8px 8px 0 rgba(43, 42, 41, 0.7);
+  background-color: rgb(241, 241, 241);
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 li {
