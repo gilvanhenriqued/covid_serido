@@ -36,7 +36,7 @@ export default {
 .card {
   border: solid 1px rgb(218, 218, 218);
   box-shadow: 8px 8px 8px 0 rgba(43, 42, 41, 0.7);
-  background-color: rgb(241, 241, 241);
+  background-color: rgba(255, 255, 255, 0.952);
   min-height: 340px;
   display: flex;
   flex-direction: column;
