@@ -1,4 +1,6 @@
-# covid-serido
+# Boletim Covid Seridó
+O projeto foi desenvolvido com Vue.js para estruturar o front-end, Materialize.css 
+para criar o design e o axios responsável pelas requisições a API do Brasil.io.
 
 ## Project setup
 ```
@@ -9,16 +11,3 @@ npm install
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
